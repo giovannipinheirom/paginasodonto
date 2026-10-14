@@ -1,16 +1,16 @@
-/* Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
+/* Google Fonts: Fraunces (Thick, rounded, soft serif like inspiration) + Plus Jakarta Sans */
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,400..900,100,0&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
 
 :root {
-  --color-primary: #00897b;
-  --color-primary-dark: #00695c;
-  --color-primary-light: #e0f2f1;
+  --color-primary: #3586ba;
+  --color-primary-dark: #266fa0;
+  --color-primary-light: #e0f0f9;
   --color-accent-green: #25d366;
-  --color-dark-bg: #102228;
-  --color-dark-card: #162b32;
-  --color-ice-bg: #edf7f9;
-  --color-heading: #122429;
-  --color-body: #4b636b;
+  --color-dark-bg: #12183e;
+  --color-dark-card: #192154;
+  --color-ice-bg: #f0f5fa;
+  --color-heading: #0f172a;
+  --color-body: #475569;
 }
 
 body {
@@ -21,8 +21,12 @@ body {
   scroll-behavior: smooth;
 }
 
+/* Headings with thick, rounded serif typography exactly like the inspiration */
 h1, h2, h3, .font-serif {
-  font-family: 'Playfair Display', Georgia, serif;
+  font-family: 'Fraunces', Georgia, serif;
+  font-weight: 700;
+  font-variation-settings: "SOFT" 100, "WONK" 0;
+  letter-spacing: -0.015em;
 }
 
 /* Custom Scrollbar */
@@ -33,11 +37,11 @@ h1, h2, h3, .font-serif {
   background: #f1f5f9;
 }
 ::-webkit-scrollbar-thumb {
-  background: #00897b;
+  background: #3586ba;
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #00695c;
+  background: #266fa0;
 }
 
 /* Scroll Progress Bar */
@@ -46,7 +50,7 @@ h1, h2, h3, .font-serif {
   top: 0;
   left: 0;
   height: 3px;
-  background: linear-gradient(90deg, #00897b, #25d366);
+  background: linear-gradient(90deg, #3586ba, #25d366);
   z-index: 100;
   width: 0%;
   transition: width 0.1s ease-out;
@@ -183,14 +187,14 @@ h1, h2, h3, .font-serif {
   width: 36px;
   height: 36px;
   background-color: #ffffff;
-  color: #00897b;
+  color: #3586ba;
   border-radius: 9999px;
   display: flex;
   align-items: center;
   justify-content: center;
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
   cursor: ew-resize;
-  border: 2px solid #00897b;
+  border: 2px solid #3586ba;
   transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -204,17 +208,8 @@ h1, h2, h3, .font-serif {
   50% { transform: translateY(-7px); }
 }
 
-@keyframes floatBadge2 {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-7px); }
-}
-
 .animate-float-1 {
   animation: floatBadge1 4.5s ease-in-out infinite;
-}
-
-.animate-float-2 {
-  animation: floatBadge2 4.5s ease-in-out 2.2s infinite;
 }
 
 /* Pulsing subtle glow for WhatsApp CTA */
@@ -243,6 +238,6 @@ h1, h2, h3, .font-serif {
 
 /* Focus accessible outlines */
 a:focus-visible, button:focus-visible {
-  outline: 2px solid #00897b;
+  outline: 2px solid #3586ba;
   outline-offset: 3px;
 }
